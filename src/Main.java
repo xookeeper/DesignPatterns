@@ -9,6 +9,8 @@ import observerPattern.Observer;
 import observerPattern.Subject;
 import observerPattern.WeatherObserver;
 import observerPattern.WeatherStation;
+import prototypePattern.Shape;
+import prototypePattern.Square;
 import strategyPattern.Multiplication;
 import strategyPattern.OperationManager;
 
@@ -40,7 +42,11 @@ public class Main {
         Observer observer = new WeatherObserver(station);
         station.setTemperature(100);
 
-
+        // Prototype design patterns
+        Shape square = new Square(10, 10);
+        square.draw();
+        Shape clonedObject = square.cloneObject();
+        clonedObject.draw();
 
 
     }
